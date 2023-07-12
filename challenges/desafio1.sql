@@ -5,15 +5,15 @@ USE SpotifyClone;
 CREATE TABLE planos 
 (
     id_plano INT PRIMARY KEY AUTO_INCREMENT,
-    nome_do_plano VARCHAR(512),
-    valor VARCHAR(512)
+    nome_do_plano VARCHAR(512) NOT NULL,
+    valor DECIMAL(11,2) NOT NULL
 );
 
 INSERT INTO planos (id_plano, nome_do_plano, valor) VALUES 
-('1', 'gratuito', '0'),
-('2', 'familiar', '7,99'),
-('3', 'universitário', '5,99'),
-('4', 'pessoal', '6,99');
+('1', 'gratuito', "0.00"),
+('2', 'familiar', "7.99"),
+('3', 'universitário', "5.99"),
+('4', 'pessoal', "6.99");
 
 CREATE TABLE pessoa_usuaria 
 (
